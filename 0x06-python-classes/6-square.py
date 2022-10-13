@@ -1,6 +1,15 @@
 #!/usr/bin/python3
+"""My square module"""
+
 class Square:
+    """defines a square"""
+
     def __init__(self, size=0, position=(0, 0)):
+        """Create a Square
+        Args:
+            size: length of a side of Square
+            position: where the square is
+        """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
