@@ -52,3 +52,34 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """
+        method to get area
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """
+        method to get perimeter
+        """
+        return self.__width * 2 + self.__height * 2
+
+    def __str__(self):
+        """
+        print rectangle using #
+        """
+        string = ""
+        if self.__width == 0 or self.__height == 0:
+            string += "\n"
+            return
+        for i in range(self.__height):
+            string += "#" * self.__width + "\n"
+        return string[:-1]
+
+    def __repr__(self):
+        """
+        print string representing width and height of rectangle
+        """
+        string = "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
+        return string
